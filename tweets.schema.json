@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Doomed-4Dina/Tweetme/blob/main/tweets.schema.json",
+  "title": "Tweetme template collection",
+  "description": "A label and exactly ten promotional post templates.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "triggerPhrase",
+    "tweets"
+  ],
+  "properties": {
+    "triggerPhrase": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "tweets": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 280,
+        "pattern": "\\S"
+      }
+    }
+  }
+}
