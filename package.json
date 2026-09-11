@@ -1,0 +1,15 @@
+{
+  "name": "tweetme-templates",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A validated collection of ten promotional post templates.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "test": "npm run validate"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
